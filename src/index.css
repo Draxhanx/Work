@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btndiv {
+    /* position: relative; */
+    /* display: inline-block; */
+    overflow: hidden;
+  }
+  
+  .btndiv span {
+    /* display: inline-block; */
+    transition: transform 0.5s ease;
+  }
+  
+  .btndiv::after {
+    content: "Get Started";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -16%;
+    bottom: -100%;
+    transition: transform 0.5s ease;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .btndiv:hover span {
+    transform: translateY(-120%);
+  }
+  
+  .btndiv:hover::after {
+    transform: translateY(-100%);
+  }
+  
